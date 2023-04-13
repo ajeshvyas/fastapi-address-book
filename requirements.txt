@@ -1,0 +1,4 @@
+fastapi==0.95.0
+FastAPI-SQLAlchemy==0.2.1
+uvicorn==0.21.1
+shapely==2.0.1
