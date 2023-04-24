@@ -66,6 +66,7 @@ class AddressUpdate(BaseModel):
 @app.get("/addresses/nearby/")
 def get_addresses_within_distance(latitude: float, longitude: float, distance: float, db: Session = Depends(get_db)):
     addresses = db.query(Address).all()
+    distance += 1
     polygon = Polygon([
         (latitude + distance, longitude + distance),
         (latitude - distance, longitude + distance),
